@@ -1,0 +1,32 @@
+const _ = require('lodash'), mongoose = require('mongoose'), [ENTITY] = mongoose.model('[ENTITY]');
+
+const [CONTROLLER_NAME]Controller = {
+
+  index: async(req, res)=>{
+    let [ENTITY_MIN] = await [ENTITY].find({});
+    res.json([ENTITY_MIN]);
+  },
+
+  _save: async (req, res) =>{
+    let data = req.body;
+    let new[ENTITY] = new [ENTITY](data);
+    let [ENTITY_MIN] = await new[ENTITY].save();
+    res.json([ENTITY_MIN]);
+  },
+
+  _update: async (req, res) => {
+    let data = req.body;
+    let _id = req.params.id;
+    let [ENTITY_MIN] = await [ENTITY].update({_id},data);
+    res.json([ENTITY_MIN]);
+  },
+
+  _delete: async (req, res) => {
+    let _id = req.params.id;
+    let article = await [ENTITY].remove({_id});
+    res.json([ENTITY_MIN]);
+  },
+
+};
+
+module.exports = [CONTROLLER_NAME]Controller;

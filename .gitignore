@@ -1,0 +1,7 @@
+node_modules/
+public/components
+.nyc_output
+.sass-cache
+.yo-rc.json
+package-lock.json
+.idea*

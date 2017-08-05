@@ -1,7 +1,7 @@
 const S = require('string');
 const fs = require('fs');
 
-const makeAsyncApi = async (args) => {
+const makeAsyncApi = async (args, callback) => {
   try {
     console.log("Args: ",args);
 
@@ -25,7 +25,6 @@ const makeAsyncApi = async (args) => {
     await fs.writeFileSync('app/controllers/' + baseName + ".js", templateController);
 
     //generate model
-    console.log("Schema: ",schema);
 
     let templateModel = await fs.readFileSync('core/command/template_commands/template_model');
     templateModel = templateModel.toString();
@@ -44,9 +43,11 @@ const makeAsyncApi = async (args) => {
     await fs.writeFileSync('app/router/router-' + baseName + ".js", templateRoute);
 
     console.log('Command executed with success!');
+    callback();
     return;
   } catch (e) {
     console.warn("ERROR: ",e);
+    callback();
     return;
   }
 };

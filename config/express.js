@@ -1,4 +1,4 @@
-const express = require('config/express');
+const express = require('express');
 const glob = require('glob');
 
 const favicon = require('serve-favicon');

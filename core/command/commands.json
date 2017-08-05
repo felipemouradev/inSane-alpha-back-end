@@ -9,7 +9,7 @@
     {
       "make:api <name> [schema]": {
         "info": "Make API, optionally fields can be sent, as in the example: make:api Ass name:String,hasHair: Boolean",
-        "callback": "require('./core/command/make-async-api')(args);"
+        "callback": "require('./core/command/make-async-api')(args,callback);"
       }
     },{
       "make:controller <name>": {
@@ -20,7 +20,7 @@
     {
       "make:model <name>": {
         "info": "Make Model",
-        "callback": "console.log('Model',args.name);"
+        "callback": "require('./core/command/make-async-model')(args);"
       }
     }
   ]

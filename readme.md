@@ -4,7 +4,7 @@ Framework nodeJs ( >=node v7), based on async / await and es6, this framework us
 **TODO**:
 
  1. Removes sample codes
- 2. Implements generate API codes
+ 2. ~~Implements generate API codes, make:API~~
  3. Implements  make:controller
  4. Implements make:model
  5. Implements architecture for sending emails

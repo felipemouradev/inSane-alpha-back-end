@@ -7,9 +7,9 @@
       }
     },
     {
-      "make:api <name> [fields]": {
+      "make:api <name> [schema]": {
         "info": "Make API, optionally fields can be sent, as in the example: make:api Ass name:String,hasHair: Boolean",
-        "callback": "require('./core/command/commands')(args);"
+        "callback": "require('./core/command/make-async-api')(args);"
       }
     },{
       "make:controller <name>": {

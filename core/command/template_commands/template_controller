@@ -23,7 +23,7 @@ const [CONTROLLER_NAME]Controller = {
 
   _delete: async (req, res) => {
     let _id = req.params.id;
-    let article = await [ENTITY].remove({_id});
+    let [ENTITY_MIN] = await [ENTITY].remove({_id});
     res.json([ENTITY_MIN]);
   },
 

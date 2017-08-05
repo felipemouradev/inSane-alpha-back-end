@@ -1,0 +1,13 @@
+const express = require('express'),
+  router = express.Router(),
+  [ENTITY]Controller = require('../controllers/[ENTITY_MIN]');
+
+
+module.exports = function (app) {
+  app.use('/[ENTITY_MIN]', router);
+};
+
+router.get('/', [ENTITY]Controller.index);
+router.post('/', [ENTITY]Controller._save);
+router.put('/:id', [ENTITY]Controller._update);
+router.delete('/:id', [ENTITY]Controller._delete);

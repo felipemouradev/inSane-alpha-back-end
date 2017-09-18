@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const [ENTITY] = require('./../models/[model]');
+const [ENTITY] = require('./../models/[ENTITY_MIN]');
 
 const [CONTROLLER_NAME]Controller = {
 

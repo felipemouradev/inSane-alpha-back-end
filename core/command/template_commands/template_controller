@@ -1,4 +1,5 @@
-const _ = require('lodash'), mongoose = require('mongoose'), [ENTITY] = mongoose.model('[ENTITY]');
+const _ = require('lodash');
+const [ENTITY] = require('./../models/[model]');
 
 const [CONTROLLER_NAME]Controller = {
 

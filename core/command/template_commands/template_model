@@ -1,8 +1,10 @@
-const mongoose = require('mongoose'),
-Schema = mongoose.Schema;
+const mongoose = require('mongoose'), Schema = mongoose.Schema;
 
 const [MODEL]Schema = new Schema({
   [SCHEMA]
 });
 
-mongoose.model('[MODEL]', [MODEL]Schema);
+const [MODEL] = mongoose.model('[MODEL]', [MODEL]Schema);
+mongoose.Promise = require('bluebird');
+
+module.exports = [MODEL];

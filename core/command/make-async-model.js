@@ -3,8 +3,6 @@ const fs = require('fs');
 
 const makeAsyncModel = async (args) => {
   try {
-    console.log("Args: ", args);
-
     //terms
     let baseName = args.name;
     let entity = S(baseName).capitalize().s;

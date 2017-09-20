@@ -1,6 +1,6 @@
-const express      = require('express'),
-const router       = express.Router(),
-[ENTITY]Controller = require('../controllers/[ENTITY_MIN]');
+const express               = require('express');
+const router                = express.Router();
+const [ENTITY]Controller    = require('../controllers/[ENTITY_MIN]');
 
 
 module.exports = function (app) {

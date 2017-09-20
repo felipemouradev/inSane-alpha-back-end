@@ -1,0 +1,6 @@
+const [SERVICE_NAME]Service = {
+  doSomething: async()=> {
+    return null;
+  },
+}
+module.exports = [SERVICE_NAME]Service;

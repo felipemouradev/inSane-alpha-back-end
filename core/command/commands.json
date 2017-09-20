@@ -11,7 +11,8 @@
         "info": "Make API, optionally fields can be sent, as in the example: make:api Ass name:String,hasHair: Boolean",
         "callback": "require('./core/command/make-async-api')(args,callback);"
       }
-    },{
+    },
+    {
       "make:controller <name>": {
         "info": "Make Controller",
         "callback": "console.log('Controller',args.name);"
@@ -21,6 +22,12 @@
       "make:model <name>": {
         "info": "Make Model",
         "callback": "require('./core/command/make-async-model')(args);"
+      }
+    },
+    {
+      "make:service <name>": {
+        "info": "Make Service",
+        "callback": "require('./core/command/make-async-service')(args);"
       }
     }
   ]

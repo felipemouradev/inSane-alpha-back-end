@@ -1,13 +1,10 @@
 const express         = require('express');
 const glob            = require('glob');
-
-const favicon         = require('serve-favicon');
 const logger          = require('morgan');
 const cookieParser    = require('cookie-parser');
 const bodyParser      = require('body-parser');
 const compress        = require('compression');
 const methodOverride  = require('method-override');
-const exphbs          = require('express-handlebars');
 
 module.exports = (app, config) => {
   let env = process.env.NODE_ENV || 'development';

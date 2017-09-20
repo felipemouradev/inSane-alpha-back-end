@@ -1,8 +1,6 @@
-
 //Generator commands;
-
 const vorpal = require('vorpal')();
-const fs = require('fs');
+const fs     = require('fs');
 const commandCreate = async (args) => {
     const initalFile = require('./commands.json');
     try {

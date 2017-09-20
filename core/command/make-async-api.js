@@ -1,5 +1,5 @@
-const S = require('string');
-const fs = require('fs');
+const S   = require('string');
+const fs  = require('fs');
 
 const makeAsyncApi = async (args, callback) => {
 

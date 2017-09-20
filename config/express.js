@@ -1,20 +1,19 @@
-const express = require('express');
-const glob = require('glob');
+const express         = require('express');
+const glob            = require('glob');
 
-const favicon = require('serve-favicon');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
-const compress = require('compression');
-const methodOverride = require('method-override');
-const exphbs  = require('express-handlebars');
+const favicon         = require('serve-favicon');
+const logger          = require('morgan');
+const cookieParser    = require('cookie-parser');
+const bodyParser      = require('body-parser');
+const compress        = require('compression');
+const methodOverride  = require('method-override');
+const exphbs          = require('express-handlebars');
 
-module.exports = function(app, config) {
+module.exports = (app, config) => {
   let env = process.env.NODE_ENV || 'development';
   app.locals.ENV = env;
-  app.locals.ENV_DEVELOPMENT = env == 'development';
+  app.locals.ENV_DEVELOPMENT = env === 'development';
 
-  // app.use(favicon(config.root + '/public/img/favicon.ico'));
   app.use(logger('dev'));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({
@@ -26,35 +25,15 @@ module.exports = function(app, config) {
   app.use(methodOverride());
 
   let routes = glob.sync(config.root + '/app/router/*.js');
-  routes.forEach(function (route) {
+  routes.forEach( (route) => {
     require(route)(app);
   });
 
-  app.use(function (req, res, next) {
+  app.use( (req, res, next) => {
     let err = new Error('Not Found');
     err.status = 404;
     next(err);
   });
-
-  // if(app.get('env') === 'development'){
-  //   app.use(function (err, req, res, next) {
-  //     res.status(err.status || 500);
-  //     res.render('error', {
-  //       message: err.message,
-  //       error: err,
-  //       title: 'error'
-  //     });
-  //   });
-  // }
-  //
-  // app.use(function (err, req, res, next) {
-  //   res.status(err.status || 500);
-  //     res.render('error', {
-  //       message: err.message,
-  //       error: {},
-  //       title: 'error'
-  //     });
-  // });
 
   return app;
 };

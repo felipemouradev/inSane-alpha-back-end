@@ -1,7 +1,6 @@
-const vorpal = require('vorpal')();
-const _ = require('lodash');
-const _eval = require('eval');
-let commands = require('./core/command/commands.json');
+const vorpal    = require('vorpal')();
+const _         = require('lodash');
+let commands    = require('./core/command/commands.json');
 
 _.map(commands.commands, (command, i) => {
     vorpal

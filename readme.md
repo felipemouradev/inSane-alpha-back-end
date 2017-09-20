@@ -28,11 +28,11 @@ For execute commads inSane run node console.js:
 
 **TODO**:
 
- 1. Removes sample codes
+ 1. ~~Removes sample codes~~
  2. ~~Implements generate API codes, make:API~~
  3. Implements make:auth
- 4. Implements  make:controller
- 5. Implements make:model
+ 4. ~~Implements  make:controller~~
+ 5. ~~Implements make:model~~
  6. Implements architecture for sending emails
  7. Implements architecture for auth
  8. Study feasibility of designing documentation when a new endpoint API is generated

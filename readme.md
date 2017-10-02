@@ -21,6 +21,8 @@ For execute commads inSane run node console.js:
 	 - Generate crud rest using async / await, this generete controller, route, model, fields is optional if you not passing for default is apply 'name:String', example: `make:api bunda nomeDoFula:String,temPelo:Boolean,cor:String`
  - `make:model <entity> [fields]`
 	 - Generate model, fields is optional if you not passing for default is apply 'name:String', example: `make:model bunda nomeDoFula:String,temPelo:Boolean,cor:String`
+ - `make:service <entity>`
+   - Generate service, example: `make:service bunda`
 
 
 
